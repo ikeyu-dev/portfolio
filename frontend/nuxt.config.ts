@@ -19,5 +19,5 @@ export default defineNuxtConfig({
       title: 'Portfolio',
     },
   },
-  devtools: { enabled: true }
+  devtools: { enabled: true },
 })

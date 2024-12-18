@@ -30,8 +30,8 @@ onMounted(() => {
 
 <template>
     <div class="bg-gray-50 dark:bg-gray-800">
-        <header class="bg-gray-50 border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
-            <div class="mx-auto flex items-center justify-end p-3">
+        <header class="bg-gray-50 border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 sticky">
+            <div class="mx-auto flex items-center justify-end" style="padding: 10px;">
                 <button
                     @click="toggleDarkMode()"
                     class="relative inline-flex items-center justify-center p-2 text-gray-500 rounded-lg hover:bg-gray-200 dark:text-gray-400 dark:hover:bg-gray-700"
@@ -49,7 +49,7 @@ onMounted(() => {
                 </button>
             </div>
         </header>
-        <div class="flex items-center justify-center" style="min-height: calc(100vh - 65px);">
+        <div class="flex items-center justify-center" style="min-height: calc(100svh - 60px);">
             <div class="flex flex-col items-center py-12">
                 <img class="w-24 h-24 mb-4 rounded-full shadow-lg" src="https://lh3.googleusercontent.com/a/ACg8ocJ-fMXlk0DT7K7ABGbbTqd2pHcqKjXy-oADh4TNzWzIhlZZ9gI=s432-c-no" alt="Profile picture"/>
                 <p class="mb-1 text-2xl font-semibold text-gray-900 dark:text-white">

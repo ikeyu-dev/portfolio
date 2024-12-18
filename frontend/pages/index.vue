@@ -8,7 +8,7 @@
         <div class="flex flex-col items-center pb-10">
             <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="https://lh3.googleusercontent.com/a/ACg8ocJ-fMXlk0DT7K7ABGbbTqd2pHcqKjXy-oADh4TNzWzIhlZZ9gI=s432-c-no" alt="Bonnie image"/>
             <p class="mb-1 text-xl font-medium text-gray-900 dark:text-white">
-                Ikeda Yuma
+                uyuyu
             </p>
             <p class="text-sm text-gray-500 dark:text-gray-400">
                 student

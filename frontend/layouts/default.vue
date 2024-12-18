@@ -13,7 +13,7 @@ onMounted(() => {
 </script>
 
 <template>
-        <header class="bg-gray-50 border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+        <header class="bg-gray-50 border-b border-gray-300 dark:bg-gray-800 dark:border-gray-600">
             <div class="mx-auto flex items-center justify-end gap-2" style="padding: 10px;">
                 <button
                     @click="toggleDarkMode()"

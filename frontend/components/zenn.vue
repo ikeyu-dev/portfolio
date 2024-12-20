@@ -1,17 +1,36 @@
+
 <script setup lang="ts">
 import { get_Zenn_articles } from '~/composables/zenn';
 import type { ZennResponse } from '~/composables/zenn_interface';
 
 const zenn_articles = await get_Zenn_articles<ZennResponse>("uyuy_create")
+zenn_articles.articles.sort((a, b) => a.id - b.id);
 
+function Estimated_Time(letters_count: number): string {
+    if (letters_count <= 100) {
+        return "1分未満"
+    } else if (letters_count <= 200) {
+        return "1分";
+    } else if (letters_count <= 500) {
+        return "2分";
+    } else if (letters_count <= 1000) {
+        return "3分";
+    } else if (letters_count <= 2000) {
+        return "5分";
+    } else if (letters_count <= 5000) {
+        return "10分";
+    } else {
+        return "15分以上";
+    }
+}
 </script>
 
 <template>
     <section class="flex justify-center items-center text-gray-600 body-font">
             <div class="flex flex-wrap">
-                <div v-for="article in zenn_articles.articles" class="p-2 mx-auto">
-                    <nuxt-link :to="`https://zenn.dev/uyuy_create/articles/${article.slug}`" target="_blank" class="p-2 md:w-1/2 w-full" >
-                        <div class="h-full flex items-center border-gray-200 border border-neutral-300 dark:border-gray-600 px-4 rounded-xl">
+                <div v-for="article in zenn_articles.articles" class="p-2 mx-auto md:w-1/2 w-4/5">
+                    <nuxt-link :to="`https://zenn.dev/uyuy_create/articles/${article.slug}`" target="_blank" class="p-2" >
+                        <div class="h-full flex items-center border-gray-200 border border-neutral-300 dark:border-gray-600 px-4 rounded-xl transition-all duration-300">
                             <div class="flex-grow">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -35,14 +54,20 @@ const zenn_articles = await get_Zenn_articles<ZennResponse>("uyuy_create")
                                         />
                                     </g>
                                 </svg>
-                                <p class="pt-2 font-semibold text-gray-900 dark:text-gray-200 transition-all duration-300">
-                                    {{ article.title.length <= 15
-                                        ? article.title.padEnd(15, "　")
-                                        : article.title.slice(0, 16) + " .... "
-                                    }}
+                                <p class="pt-2 text-lg font-semibold text-gray-900 dark:text-gray-200 transition-all duration-300">
+                                    {{ article.emoji }} {{ article.title }}
                                 </p>
-                                <p class="text-gray-500 dark:text-gray-400 mb-3 transition-all duration-300">
-                                    {{ article.body_updated_at.split("T")[0].replaceAll("-", "/") + " " + article.body_updated_at.split("T")[1].split(".")[0] }}
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mt-1 transition-all duration-300">
+                                    更新日 : {{ article.body_updated_at.split("T")[0].replaceAll("-", "/") + " " + article.body_updated_at.split("T")[1].split(".")[0] }}
+                                </p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 transition-all duration-300">
+                                    公開日 : {{ article.published_at.split("T")[0].replaceAll("-", "/") + " " + article.published_at.split("T")[1].split(".")[0] }}
+                                </p>
+                                <p class="text-right text-xs text-gray-500 dark:text-gray-400 transition-all duration-300">
+                                    {{ article.body_letters_count }}文字
+                                </p>
+                                <p class="text-right text-xs text-gray-500 dark:text-gray-400 transition-all duration-300">
+                                    目安 : {{ Estimated_Time(article.body_letters_count) }}
                                 </p>
                             </div>
                         </div>

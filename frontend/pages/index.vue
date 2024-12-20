@@ -12,7 +12,7 @@
 
                 <Urls />
 
-                <Teck />
+                <Tech />
 
             </div>
         </div>

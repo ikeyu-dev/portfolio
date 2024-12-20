@@ -11,7 +11,7 @@ export interface ZennArticle {
     is_suspending_private: boolean,
     published_at: string,
     body_updated_at: string,
-    source_repo_updated_at: null,
+    source_repo_updated_at: string | null,
     pinned: boolean,
     path: string,
     user: {

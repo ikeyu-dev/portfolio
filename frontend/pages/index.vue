@@ -13,7 +13,6 @@
                 <p class="text-sm text-gray-500 dark:text-gray-400 mb-3 transition-all duration-300">
                     high school student
                 </p>
-
                 <Urls />
 
                 <Tech />

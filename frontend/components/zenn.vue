@@ -6,22 +6,8 @@ import type { ZennResponse } from '~/composables/zenn_interface';
 const zenn_articles = await get_Zenn_articles<ZennResponse>("uyuy_create")
 zenn_articles.articles.sort((a, b) => a.id - b.id);
 
-function Estimated_Time(letters_count: number): string {
-    if (letters_count <= 100) {
-        return "1分未満"
-    } else if (letters_count <= 200) {
-        return "1分";
-    } else if (letters_count <= 500) {
-        return "2分";
-    } else if (letters_count <= 1000) {
-        return "3分";
-    } else if (letters_count <= 2000) {
-        return "5分";
-    } else if (letters_count <= 5000) {
-        return "10分";
-    } else {
-        return "15分以上";
-    }
+function Estimated_Time(letters_count: number) {
+    return Math.round(letters_count / 400) + "分";
 }
 </script>
 

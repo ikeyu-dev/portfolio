@@ -3,7 +3,8 @@ import { onMounted } from 'vue';
 import { toggleDarkMode } from '~/composables/theme_mode';
 import { test } from '~/composables/test';
 
-test("uyuy_create")
+const res = test("uyuy_create")
+console.log(res)
 
 onMounted(() => {
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {

@@ -1,4 +1,5 @@
-export async function test() {
-    const res = await fetch("https://zenn.dev/api/articles?username=uyuy_create");
-    console.log(res.json());
-}
+export async function test(username: string) {
+    const config = useRuntimeConfig();
+    const response = await useFetch(config.public.zenn_ENDPOINT + username);
+    return response;
+};

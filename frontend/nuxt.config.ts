@@ -20,5 +20,10 @@ export default defineNuxtConfig({
       title: 'Portfolio',
     },
   },
+  runtimeConfig: {
+    public: {
+      zenn_ENDPOINT: "https://zenn.dev/api/articles?username=uyuy_create",
+    },
+  },
   devtools: { enabled: true },
 })

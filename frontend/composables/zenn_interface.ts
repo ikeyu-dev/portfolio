@@ -1,12 +1,12 @@
 export interface ZennArticle {
     id: number,
-    post_type: "Article"
+    post_type: string
     title: string,
     slug: string,
     comments_count: number,
     liked_count: number,
     body_letters_count: number,
-    article_type: "tech",
+    article_type: string,
     emoji: string,
     is_suspending_private: boolean,
     published_at: string,
@@ -14,7 +14,12 @@ export interface ZennArticle {
     source_repo_updated_at: null,
     pinned: boolean,
     path: string,
-    user: { id: number, username: string, name: string, avatar_small_url: string },
+    user: {
+        id: number,
+        username: string,
+        name: string,
+        avatar_small_url: string
+    },
     publication: null
 }
 

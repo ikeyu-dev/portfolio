@@ -15,7 +15,7 @@ function Estimated_Time(letters_count: number) {
     <section class="flex justify-center items-center text-gray-600 body-font">
             <div class="flex flex-wrap">
                 <div v-for="article in zenn_articles.articles" class="p-2 mx-auto md:w-1/2 w-4/5">
-                    <nuxt-link :to="`https://zenn.dev/uyuy_create/articles/${article.slug}`" target="_blank" class="p-2" >
+                    <NuxtLink :to="`https://zenn.dev/uyuy_create/articles/${article.slug}`" target="_blank" class="p-2" >
                         <div class="h-full flex items-center border-gray-200 border border-neutral-300 dark:border-gray-600 px-4 rounded-xl transition-all duration-300">
                             <div class="flex-grow">
                                 <svg
@@ -57,7 +57,7 @@ function Estimated_Time(letters_count: number) {
                                 </p>
                             </div>
                         </div>
-                    </nuxt-link>
+                    </NuxtLink>
                 </div>
             </div>
     </section>

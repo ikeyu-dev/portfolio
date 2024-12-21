@@ -32,16 +32,16 @@ onMounted(() => {
             </button>
         </div>
     </header>
-    <div class="flex flex-col flex-wrap items-center justify-center bg-gray-50 dark:bg-gray-800 transition-colors duration-300" style="min-height: calc(100svh - 60px);">
+    <div class="flex flex-col flex-wrap items-center justify-center bg-gray-50 dark:bg-gray-800 transition-all duration-300" style="min-height: calc(100svh - 60px);">
         <section>
             <div class="p-5">
             <p class="text-6xl font-bold text-blue-500 dark:text-blue-100 text-center">{{ error?.statusCode }}</p>
-            <p class="text-sm text-gray-500 dark:text-gray-400 transition-all duration-300 mt-4">
-                {{ error?.statusCode === 404 ? 'お探しのページは見つかりませんでした。' : 'エラーが発生しました。' }}
+            <p class="text-center text-sm text-gray-500 dark:text-gray-400 transition-all duration-300 mt-4">
+                {{ error?.statusCode === 404 ? 'お探しのページは見つかりませんでした。' : 'エラーが発生しました。時間をおいてから再度アクセスしてください。' }}
             </p>
             </div>
-            <section class="flex flex-col text-center items-center">
-                <nuxt-link to="/" class="w-1/2 py-3 m-3 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+            <section class="text-center items-center pt-3">
+                <nuxt-link to="/" class="w-1/2 py-3 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 transition-all duration-300">
                     ホーム画面へ
                 </nuxt-link>
             </section>

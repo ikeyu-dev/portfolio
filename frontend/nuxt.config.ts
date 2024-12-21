@@ -22,7 +22,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      zenn_ENDPOINT: "https://zenn.dev/api/articles?username=",
+      ZENN_GET_ARTICLES: "https://zenn.dev/api/articles?username=",
     },
   },
   devtools: { enabled: true },

@@ -16,7 +16,7 @@ function Estimated_Time(letters_count: number) {
             <div v-for="article in zenn_articles.articles" class="p-2 mx-auto md:w-1/2 w-4/5">
                 <NuxtLink :to="`https://zenn.dev/uyuy_create/articles/${article.slug}`" target="_blank" class="p-2">
                     <div
-                        class="h-full flex items-center border-gray-200 border border-neutral-300 dark:border-gray-600 px-4 rounded-xl transition-all duration-300">
+                        class="h-full flex items-center border-gray-200 border dark:border-gray-600 px-4 rounded-xl transition-all duration-300">
                         <div class="flex-grow">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 version="1.1" x="0px" y="0px" viewBox="0 0 88.3 88.3"

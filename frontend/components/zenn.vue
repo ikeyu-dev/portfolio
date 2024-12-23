@@ -3,17 +3,22 @@ import { get_Zenn_articles } from '~/composables/zenn';
 import type { ZennResponse } from '~/composables/zenn_interface';
 
 const zenn_articles = await get_Zenn_articles<ZennResponse>("uyuy_create")
-zenn_articles.articles.sort((a, b) => a.id - b.id);
-
+if (zenn_articles !== null) {
+    zenn_articles.articles.sort((a, b) => a.id - b.id);
+} else {
+}
 function Estimated_Time(letters_count: number) {
-    return Math.round(letters_count / 400) + "分";
+    if (letters_count !== null) {
+        return Math.round(letters_count / 400) + "分";
+    }
 }
 </script>
 
 <template>
     <section class="flex justify-center items-center text-gray-600 body-font">
         <div class="flex flex-wrap">
-            <div v-for="article in zenn_articles.articles" class="p-2 mx-auto md:w-1/2 w-4/5">
+            <div v-if="zenn_articles !== null" v-for="article in zenn_articles.articles"
+                class="p-2 mx-auto md:w-1/2 w-4/5">
                 <NuxtLink :to="`https://zenn.dev/uyuy_create/articles/${article.slug}`" target="_blank" class="p-2">
                     <div
                         class="h-full flex items-center border-gray-200 border dark:border-gray-600 px-4 rounded-xl transition-all duration-300">

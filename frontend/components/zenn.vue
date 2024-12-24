@@ -7,7 +7,8 @@ if (zenn_articles !== null) {
     zenn_articles.articles.sort((a, b) => a.id - b.id);
 } else {
 }
-function Estimated_Time(letters_count: number) {
+
+function estimated_Time(letters_count: number) {
     if (letters_count !== null) {
         return Math.round(letters_count / 400) + "分";
     }
@@ -50,7 +51,7 @@ function Estimated_Time(letters_count: number) {
                                 {{ article.body_letters_count }}文字
                             </p>
                             <p class="text-right text-xs text-gray-500 dark:text-gray-400 transition-all duration-300">
-                                目安 : {{ Estimated_Time(article.body_letters_count) }}
+                                目安 : {{ estimated_Time(article.body_letters_count) }}
                             </p>
                         </div>
                     </div>

@@ -14,7 +14,7 @@ onMounted(() => {
     <header
         class="flex justify-between items-center bg-gray-50 border-b border-gray-300 dark:bg-gray-800 dark:border-gray-600 transition-colors duration-300 p-4">
         <div class="flex items-center">
-            <span class="text-lg font-bold text-gray-700 dark:text-gray-300">
+            <span class="text-lg font-bold text-gray-700 dark:text-gray-300 transition-colors duration-300">
                 Portfolio
             </span>
         </div>

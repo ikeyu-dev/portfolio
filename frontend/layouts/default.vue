@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
 import { toggleDarkMode } from '~/composables/theme_mode';
 
 onMounted(() => {

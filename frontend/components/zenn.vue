@@ -6,7 +6,7 @@ const zenn_articles = await get_Zenn_articles<ZennResponse>("uyuy_create")
 if (zenn_articles !== null) {
     zenn_articles.articles.sort((a, b) => a.id - b.id);
 } else {
-}
+}   
 
 function estimated_Time(letters_count: number) {
     if (letters_count !== null) {

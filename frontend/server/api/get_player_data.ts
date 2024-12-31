@@ -13,15 +13,7 @@ export default defineEventHandler(async (event) => {
     const config = useRuntimeConfig();
     const PLAYERS_API_URL = config.public.PLAYERS_API_URL;
     const url = PLAYERS_API_URL + uid;
-    // try {
     // const data = await $fetch(url);
     // console.log(data);
-    // return data;
     return url;
-    // } catch (e) {
-    //     throw createError({
-    //         statusCode: 500,
-    //         statusMessage: "Failed to fetch player data",
-    //     });
-    // }
 });

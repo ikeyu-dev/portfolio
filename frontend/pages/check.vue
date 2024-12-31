@@ -3,8 +3,6 @@ import { ref } from 'vue';
 
 const uid = ref(''); // 空文字列で初期化
 const playerData = ref(null);
-const loading = ref(false);
-const error = ref(null);
 
 async function calculate_Score() {
     playerData.value = await $fetch(`/api/get_players_data?uid=${uid.value}`);

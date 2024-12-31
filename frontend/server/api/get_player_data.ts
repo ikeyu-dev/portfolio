@@ -14,6 +14,13 @@ export default defineEventHandler(async (event) => {
         });
     }
     const url = PLAYERS_API_URL + uid;
-    response.value = await $fetch(url);
-    return response.value.playerInfo;
+    try {
+        response.value = await $fetch(url);
+        return response.value.playerInfo;
+    } catch (e) {
+        throw createError({
+            statusCode: 500,
+            statusMessage: "Failed to fetch player data",
+        });
+    }
 });

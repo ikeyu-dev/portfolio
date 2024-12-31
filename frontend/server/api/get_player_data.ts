@@ -4,7 +4,6 @@ import { ref } from "vue";
 
 export default defineEventHandler(async (event) => {
     const uid = getQuery(event).uid;
-    const response = ref();
     if (!uid) {
         throw createError({
             statusCode: 400,

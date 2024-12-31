@@ -16,7 +16,7 @@ export default defineEventHandler(async (event) => {
     const url = PLAYERS_API_URL + uid;
     try {
         response.value = await $fetch(url);
-        return response.value.playerInfo;
+        return response.value;
     } catch (e) {
         throw createError({
             statusCode: 500,

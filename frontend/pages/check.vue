@@ -3,7 +3,7 @@ import { ref } from 'vue';
 const uid = ref('');
 
 async function calculate_Score() {
-    const { data: info } = await useFetch(`/api/get_players_data?uid=${uid.value}`);
+    const { data: info } = await useFetch(`/api/get_player_data?uid=${uid.value}`);
     alert(`${info.value}`);
 }
 </script>

@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
     const config = useRuntimeConfig();
     const PLAYERS_API_URL = config.public.PLAYERS_API_URL;
     const url = PLAYERS_API_URL + uid;
-    // const data = await $fetch(url);
-    // console.log(data);
-    return url;
+    const response = await $fetch<{ data: any }>(url);
+    return response.data;
+    // return url;
 });

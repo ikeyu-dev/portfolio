@@ -18,7 +18,7 @@
                 <p
                     class="text-sm text-gray-500 dark:text-gray-400 mb-3 transition-all duration-300"
                 >
-                    high school student
+                    日本工業大学 先進工学部 データサイエンス学科
                 </p>
                 <Urls />
 

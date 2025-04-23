@@ -3,13 +3,15 @@ import { ref } from "vue";
 import type { PlayerData } from "~/composables/genshin_score_checker/player_interface";
 
 const uid = ref("");
-const response = ref();
+const response = ref<PlayerData | null>(null);
 
-async function calculate_Score() {
+async function caluc_score() {
     const { data: player_all_data } = await useFetch<PlayerData>(
         `/api/get_player_data?uid=${uid.value}`
     );
-    response.value = player_all_data.value;
+    response.value = player_all_data.value
+        ? JSON.parse(JSON.stringify(player_all_data.value))
+        : null;
 }
 </script>
 
@@ -37,7 +39,7 @@ async function calculate_Score() {
                     style="max-width: 300px"
                 />
                 <button
-                    @click="calculate_Score()"
+                    @click="caluc_score()"
                     class="mt-8 md:w-10/12 w-1/2 flex justify-center items-center px-4 py-2 text-lg text-white bg-blue-500 rounded-md hover:bg-blue-600 transition-colors duration-300"
                 >
                     Caluculate

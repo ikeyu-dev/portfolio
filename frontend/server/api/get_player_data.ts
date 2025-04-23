@@ -1,7 +1,6 @@
 import { defineEventHandler, getQuery } from "h3";
 import { useRuntimeConfig } from "#imports";
 import type { PlayerData } from "~/composables/genshin_score_checker/player_interface";
-import { ref } from "vue";
 
 export default defineEventHandler(async (event) => {
     const uid = getQuery(event).uid;

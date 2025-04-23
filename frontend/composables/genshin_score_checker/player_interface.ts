@@ -17,7 +17,7 @@ export interface PlayerInfo {
     finishAchievementNum: number;
     towerFloorIndex: number;
     towerLevelIndex: number;
-    showAvatarInfoList: AvatarInfo[];
+    showAvatarInfoList: AvatarInfo;
     profilePicture: ProfilePicture;
     theaterActIndex: number;
     theaterModeIndex: number;

@@ -23,7 +23,6 @@ export default defineNuxtConfig({
     runtimeConfig: {
         public: {
             ZENN_GET_ARTICLES: "https://zenn.dev/api/articles?username=",
-            PLAYERS_API_URL: "https://enka.network/api/uid/",
         },
     },
     devtools: { enabled: true },

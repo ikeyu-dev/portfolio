@@ -22,10 +22,6 @@ onMounted(() => {
 
     if (currentPath.value === "/") {
         title.value = "Portfolio";
-    } else if (currentPath.value === "/genshin_score_checker") {
-        title.value =
-            currentPath.value.split("/")[1].replaceAll("_", " ") +
-            " 0.0.0-beta";
     } else {
         title.value = currentPath.value.split("/")[1].replaceAll("_", " ");
     }

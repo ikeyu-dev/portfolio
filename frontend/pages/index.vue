@@ -7,7 +7,7 @@
             <div class="flex flex-col items-center py-12">
                 <img
                     class="w-1/3 mb-4 rounded-full shadow-lg transition-all duration-300"
-                    src="https://lh3.googleusercontent.com/a/ACg8ocJ-fMXlk0DT7K7ABGbbTqd2pHcqKjXy-oADh4TNzWzIhlZZ9gI=s432-c-no"
+                    src="https://lh3.googleusercontent.com/a/ACg8ocJyKmN00v0EKYBId9b_gms6XRo-YnT7ZbgZVYPma5cNTPhMnjo=s576-c-no"
                     alt="NO IMAGE"
                 />
                 <p

@@ -2,7 +2,7 @@
     <p
         class="mt-4 mb-2 text-lg text-gray-500 dark:text-gray-400 transition-all duration-300"
     >
-        I can use...
+        Tech Stack
     </p>
     <div class="flex gap-4">
         <a

@@ -13,7 +13,7 @@
                 <p
                     class="mb-1 text-2xl font-semibold text-gray-900 dark:text-white transition-all duration-300"
                 >
-                    uyuyu
+                    いけゆう
                 </p>
                 <p
                     class="text-sm text-gray-500 dark:text-gray-400 mb-3 transition-all duration-300"

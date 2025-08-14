@@ -21,7 +21,7 @@
         <div>
             <a
                 target="_blank"
-                href="https://github.com/uyuyuu09"
+                href="https://github.com/ikeyu-dev"
                 class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-all duration-100"
             >
                 <svg

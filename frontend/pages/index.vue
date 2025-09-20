@@ -72,23 +72,7 @@ onMounted(() => {
                 <div
                     class="mockup-code bg-gray-800 text-primary-content my-4 w-11/12 rounded-2xl hover:scale-101 transition-transform duration-300"
                     id="about_me_block"
-                >
-                    <!-- <pre data-prefix="$"><code>Name?</code></pre>
-                    <pre
-                        data-prefix=">"
-                        class="text-success"
-                    ><code> Yuma Ikeda / いけゆう</code></pre>
-                    <pre data-prefix="$"><code>Where?</code></pre>
-                    <pre
-                        data-prefix=">"
-                        class="text-success"
-                    ><code> 日本工業大学 先進工学部データサイエンス学科</code></pre>
-                    <pre data-prefix="$"><code>Community?</code></pre>
-                    <pre
-                        data-prefix=">"
-                        class="text-success"
-                    ><code> NPO法人NxTEND</code></pre> -->
-                </div>
+                ></div>
                 <Urls />
 
                 <Tech />

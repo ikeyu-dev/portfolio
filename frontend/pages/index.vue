@@ -71,18 +71,17 @@ onMounted(() => {
             style="min-height: calc(100svh - 60px)"
         >
             <div class="flex flex-col items-center">
-                <img
-                    class="w-1/3 my-4 rounded-full shadow-lg"
-                    src="https://lh3.googleusercontent.com/a/ACg8ocJyKmN00v0EKYBId9b_gms6XRo-YnT7ZbgZVYPma5cNTPhMnjo=s576-c-no"
-                    alt="NO IMAGE"
-                />
-                <p class="text-2xl font-semibold text-gray-900">
-                    Yuma Ikeda / いけゆう
-                </p>
-                <div
-                    class="mockup-code bg-gray-800 text-primary-content my-4 w-11/12 rounded-2xl hover:scale-101 transition-transform duration-300"
-                    id="about_me_block"
-                ></div>
+                <div class="grid grid-cols-3 gap-4 mx-auto place-items-center">
+                    <div
+                        class="col-span-2 mockup-code bg-gray-800 text-primary-content my-4 w-11/12 h-96 rounded-2xl hover:scale-101 transition-transform duration-300 text-xs md:text-sm"
+                        id="about_me_block"
+                    ></div>
+                    <img
+                        class="col-span-1 w-10/12 max-h-80 my-4 rounded-full shadow-lg"
+                        src="https://lh3.googleusercontent.com/a/ACg8ocJyKmN00v0EKYBId9b_gms6XRo-YnT7ZbgZVYPma5cNTPhMnjo=s576-c-no"
+                        alt="NO IMAGE"
+                    />
+                </div>
                 <Urls />
 
                 <Tech />

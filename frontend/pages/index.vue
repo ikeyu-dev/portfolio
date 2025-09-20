@@ -15,18 +15,25 @@
                 >
                     Yuma Ikeda / いけゆう
                 </p>
-                <ul>
-                    <li
-                        class="list-disc text-sm text-gray-500 mb-1 transition-all duration-300"
-                    >
-                        日本工業大学 先進工学部データサイエンス学科
-                    </li>
-                    <li
-                        class="list-disc text-sm text-gray-500 mb-3 transition-all duration-300"
-                    >
-                        NPO法人NxTEND 新規事業推進室
-                    </li>
-                </ul>
+                <div
+                    class="mockup-code bg-gray-800 text-primary-content m-10 w-11/12"
+                >
+                    <pre data-prefix="~"><code>Name?</code></pre>
+                    <pre
+                        data-prefix=">"
+                        class="text-success"
+                    ><code> Yuma Ikeda / いけゆう</code></pre>
+                    <pre data-prefix="~"><code>Where?</code></pre>
+                    <pre
+                        data-prefix=">"
+                        class="text-success"
+                    ><code> 日本工業大学 先進工学部データサイエンス学科</code></pre>
+                    <pre data-prefix="~"><code>community?</code></pre>
+                    <pre
+                        data-prefix=">"
+                        class="text-success"
+                    ><code> NPO法人NxTEND</code></pre>
+                </div>
                 <Urls />
 
                 <Tech />

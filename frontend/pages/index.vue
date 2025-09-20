@@ -6,12 +6,22 @@ onMounted(() => {
     if (!aboutMeBlock) return;
 
     const data = [
+        { question: "ABOUT ME -ikeyu", answer: " Welcome to my portfolio ✋" },
         { question: "Name?", answer: " Yuma Ikeda / いけゆう" },
         {
             question: "Where?",
             answer: " 日本工業大学 先進工学部データサイエンス学科",
         },
-        { question: "Community?", answer: " NPO法人NxTEND" },
+        { question: "Community?", answer: " NPO法人NxTEND 新規事業推進室" },
+        {
+            question: "Skill?",
+            answer: " HTML, CSS, TypeScript, Python",
+        },
+        {
+            question: "Framework?",
+            answer: " Nuxt.js, Next.js, Vue.js, FastAPI",
+        },
+        { question: "Goal?", answer: " フルスタックエンジニア" },
     ];
 
     const typeText = (
@@ -27,7 +37,7 @@ onMounted(() => {
                 clearInterval(interval);
                 if (callback) callback();
             }
-        }, 20);
+        }, 15);
     };
 
     data.forEach((item, index) => {
@@ -50,7 +60,7 @@ onMounted(() => {
                     typeText(answerCode, item.answer, null);
                 }, 500);
             });
-        }, index * 2000);
+        }, index * 1500);
     });
 });
 </script>

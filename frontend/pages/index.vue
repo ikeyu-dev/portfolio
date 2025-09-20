@@ -14,7 +14,7 @@
                     Yuma Ikeda / いけゆう
                 </p>
                 <div
-                    class="mockup-code bg-gray-800 text-primary-content my-4 mx-10 w-11/12"
+                    class="mockup-code bg-gray-800 text-primary-content my-4 mx-10 w-11/12 hover:scale-101 transition-transform duration-300"
                 >
                     <pre data-prefix="$"><code>Name?</code></pre>
                     <pre

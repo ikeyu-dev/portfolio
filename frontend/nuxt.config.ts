@@ -1,6 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
     ssr: true,
+    vite: {
+        plugins: [tailwindcss()],
+    },
     compatibilityDate: "2024-11-01",
     css: ["/static/css/main.css"],
     postcss: {

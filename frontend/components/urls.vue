@@ -4,7 +4,7 @@
             <a
                 target="_blank"
                 href="https://x.com/uyuyu_create"
-                class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-all duration-100"
+                class="text-gray-600 hover:text-gray-900 transition-all duration-100"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +22,7 @@
             <a
                 target="_blank"
                 href="https://github.com/ikeyu-dev"
-                class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-all duration-100"
+                class="text-gray-600 hover:text-gray-900 transition-all duration-100"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@
             <a
                 target="_blank"
                 href="https://zenn.dev/uyuy_create"
-                class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition-all duration-100"
+                class="text-gray-600 hover:text-gray-800 transition-all duration-100"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"

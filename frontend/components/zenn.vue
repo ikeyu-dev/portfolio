@@ -29,7 +29,7 @@ function estimated_Time(letters_count: number) {
                     class="p-2"
                 >
                     <div
-                        class="h-full flex items-center border-gray-200 border dark:border-gray-600 px-4 rounded-xl transition-all duration-300"
+                        class="h-full flex items-center border-gray-200 border px-4 rounded-xl transition-all duration-300"
                     >
                         <div class="flex-grow">
                             <svg
@@ -55,12 +55,12 @@ function estimated_Time(letters_count: number) {
                                 </g>
                             </svg>
                             <p
-                                class="pt-2 text-lg font-semibold text-gray-900 dark:text-gray-200 transition-all duration-300"
+                                class="pt-2 text-lg font-semibold text-gray-900 transition-all duration-300"
                             >
                                 {{ article.emoji }} {{ article.title }}
                             </p>
                             <p
-                                class="text-sm text-gray-500 dark:text-gray-400 mt-1 transition-all duration-300"
+                                class="text-sm text-gray-500 mt-1 transition-all duration-300"
                             >
                                 更新日 :
                                 {{
@@ -74,7 +74,7 @@ function estimated_Time(letters_count: number) {
                                 }}
                             </p>
                             <p
-                                class="text-sm text-gray-500 dark:text-gray-400 transition-all duration-300"
+                                class="text-sm text-gray-500 transition-all duration-300"
                             >
                                 公開日 :
                                 {{
@@ -88,12 +88,12 @@ function estimated_Time(letters_count: number) {
                                 }}
                             </p>
                             <p
-                                class="text-right text-xs text-gray-500 dark:text-gray-400 transition-all duration-300"
+                                class="text-right text-xs text-gray-500 transition-all duration-300"
                             >
                                 {{ article.body_letters_count }}文字
                             </p>
                             <p
-                                class="text-right text-xs text-gray-500 dark:text-gray-400 transition-all duration-300"
+                                class="text-right text-xs text-gray-500 transition-all duration-300"
                             >
                                 目安 :
                                 {{ estimated_Time(article.body_letters_count) }}

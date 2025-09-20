@@ -10,16 +10,6 @@ watch(route, (newRoute: any) => {
 });
 
 onMounted(() => {
-    if (
-        localStorage.theme === "dark" ||
-        (!("theme" in localStorage) &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-        document.documentElement.classList.add("dark");
-    } else {
-        document.documentElement.classList.remove("dark");
-    }
-
     if (currentPath.value === "/") {
         title.value = "Portfolio";
     } else {

@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+    <div class="bg-gray-50 transition-colors duration-300">
         <div
             class="flex items-center justify-center"
             style="min-height: calc(100svh - 60px)"
@@ -11,18 +11,18 @@
                     alt="NO IMAGE"
                 />
                 <p
-                    class="mb-1 text-2xl font-semibold text-gray-900 dark:text-white transition-all duration-300"
+                    class="mb-1 text-2xl font-semibold text-gray-900 transition-all duration-300"
                 >
                     Yuma Ikeda / いけゆう
                 </p>
                 <ul>
                     <li
-                        class="list-disc text-sm text-gray-500 dark:text-gray-400 mb-1 transition-all duration-300"
+                        class="list-disc text-sm text-gray-500 mb-1 transition-all duration-300"
                     >
                         日本工業大学 先進工学部データサイエンス学科
                     </li>
                     <li
-                        class="list-disc text-sm text-gray-500 dark:text-gray-400 mb-3 transition-all duration-300"
+                        class="list-disc text-sm text-gray-500 mb-3 transition-all duration-300"
                     >
                         NPO法人NxTEND 新規事業推進室
                     </li>

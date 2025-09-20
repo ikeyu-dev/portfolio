@@ -2,16 +2,10 @@
 import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
     ssr: true,
+    compatibilityDate: "2024-11-01",
+    css: ["~/static/css/main.css"],
     vite: {
         plugins: [tailwindcss()],
-    },
-    compatibilityDate: "2024-11-01",
-    css: ["/static/css/main.css"],
-    postcss: {
-        plugins: {
-            tailwindcss: {},
-            autoprefixer: {},
-        },
     },
     app: {
         head: {

@@ -28,7 +28,7 @@
                         data-prefix=">"
                         class="text-success"
                     ><code> 日本工業大学 先進工学部データサイエンス学科</code></pre>
-                    <pre data-prefix="~"><code>community?</code></pre>
+                    <pre data-prefix="~"><code>Community?</code></pre>
                     <pre
                         data-prefix=">"
                         class="text-success"

@@ -16,7 +16,7 @@ function estimated_Time(letters_count: number) {
 </script>
 
 <template>
-    <section class="flex justify-center items-center text-gray-600 body-font">
+    <section class="text-gray-600 body-font">
         <div class="flex flex-wrap">
             <div
                 v-if="zenn_articles !== null"

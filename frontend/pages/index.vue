@@ -70,11 +70,11 @@ onMounted(() => {
             <div class="flex flex-col items-center">
                 <div class="grid grid-cols-5 gap-4 place-items-center py-20">
                     <div
-                        class="col-span-2 mockup-code bg-gray-800 text-primary-content my-4 w-11/12 h-96 rounded-2xl hover:scale-101 transition-transform duration-300 text-xs md:text-sm"
+                        class="col-span-3 mockup-code bg-gray-800 text-primary-content my-4 w-11/12 h-[89] md:h-96 rounded-2xl hover:scale-101 transition-transform duration-300 text-xs md:text-sm"
                         id="about_me_block"
                     ></div>
                     <img
-                        class="col-span-1 w-10/12 max-h-80 my-4 rounded-full shadow-lg"
+                        class="col-span-2 w-10/12 max-h-80 my-4 rounded-full shadow-lg"
                         src="https://lh3.googleusercontent.com/a/ACg8ocJyKmN00v0EKYBId9b_gms6XRo-YnT7ZbgZVYPma5cNTPhMnjo=s576-c-no"
                         alt="NO IMAGE"
                     />

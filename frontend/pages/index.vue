@@ -60,7 +60,7 @@ onMounted(() => {
                     typeText(answerCode, item.answer, null);
                 }, 500);
             });
-        }, index * 1500);
+        }, index * 2000);
     });
 });
 </script>

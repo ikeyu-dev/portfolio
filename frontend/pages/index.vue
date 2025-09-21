@@ -5,7 +5,7 @@ onMounted(() => {
     const aboutMeBlock = document.getElementById("about_me_block");
     if (!aboutMeBlock) return;
 
-    const data = [
+    const aboutMeData = [
         { question: "ABOUT ME -ikeyu", answer: " Welcome to my portfolio ✋" },
         { question: "Name?", answer: " Yuma Ikeda / いけゆう" },
         {
@@ -40,7 +40,7 @@ onMounted(() => {
         }, 15);
     };
 
-    data.forEach((item, index) => {
+    aboutMeData.forEach((item, index) => {
         setTimeout(() => {
             const question = document.createElement("pre");
             question.setAttribute("data-prefix", "$");

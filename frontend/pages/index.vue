@@ -65,7 +65,7 @@ onMounted(() => {
 });
 </script>
 <template>
-    <div class="bg-gray-50 transition-colors duration-300">
+    <div class="bg-gradient-gray transition-colors duration-300 h-full">
         <div style="min-height: calc(100svh - 60px)">
             <div class="flex flex-col items-center">
                 <div class="grid grid-cols-5 gap-4 place-items-center py-20">

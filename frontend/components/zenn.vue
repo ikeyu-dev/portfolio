@@ -17,7 +17,7 @@ function estimated_Time(letters_count: number) {
 
 <template>
     <section class="text-gray-600 body-font">
-        <div class="flex flex-wrap">
+        <!-- <div class="flex flex-wrap">
             <div
                 v-if="zenn_articles !== null"
                 v-for="article in zenn_articles.articles"
@@ -102,6 +102,73 @@ function estimated_Time(letters_count: number) {
                     </div>
                 </NuxtLink>
             </div>
-        </div>
+        </div> -->
+        <ul class="list bg-base-100 rounded-box shadow-md">
+            <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">
+                Zenn記事一覧
+            </li>
+            <div
+                v-if="zenn_articles !== null"
+                v-for="article in zenn_articles.articles"
+                class=""
+            >
+                <li class="list-row">
+                    <NuxtLink
+                        :to="`https://zenn.dev/uyuy_create/articles/${article.slug}`"
+                        target="_blank"
+                        class="p-2"
+                    >
+                        <div>
+                            {{ article.emoji }}
+                        </div>
+                        <div>
+                            <div>{{ article.title }}</div>
+                            <div
+                                class="text-xs uppercase font-semibold opacity-60"
+                            >
+                                {{ article.body_letters_count }}文字
+                            </div>
+                        </div>
+                        <p
+                            class="text-sm text-gray-500 mt-1 transition-all duration-300"
+                        >
+                            更新日 :
+                            {{
+                                article.body_updated_at
+                                    .split("T")[0]
+                                    .replaceAll("-", "/") +
+                                " " +
+                                article.body_updated_at
+                                    .split("T")[1]
+                                    .split(".")[0]
+                            }}
+                        </p>
+                        <p
+                            class="text-sm text-gray-500 transition-all duration-300"
+                        >
+                            公開日 :
+                            {{
+                                article.published_at
+                                    .split("T")[0]
+                                    .replaceAll("-", "/") +
+                                " " +
+                                article.published_at.split("T")[1].split(".")[0]
+                            }}
+                        </p>
+                        <p
+                            class="text-right text-xs text-gray-500 transition-all duration-300"
+                        >
+                            {{ article.body_letters_count }}文字
+                        </p>
+                        <p
+                            class="text-right text-xs text-gray-500 transition-all duration-300"
+                        >
+                            目安 :
+                            {{ estimated_Time(article.body_letters_count) }}
+                        </p>
+                    </NuxtLink>
+                </li>
+            </div>
+        </ul>
     </section>
 </template>

@@ -66,10 +66,7 @@ onMounted(() => {
 </script>
 <template>
     <div class="bg-gray-50 transition-colors duration-300">
-        <div
-            class="flex items-center justify-center"
-            style="min-height: calc(100svh - 60px)"
-        >
+        <div style="min-height: calc(100svh - 60px)">
             <div class="flex flex-col items-center">
                 <div class="grid grid-cols-3 gap-4 mx-auto place-items-center">
                     <div

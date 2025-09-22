@@ -72,7 +72,7 @@ onMounted(() => {
                     class="md:grid md:grid-cols-4 md:gap-0 place-items-center pb-20 w-10/12"
                 >
                     <div
-                        class="col-span-3 mockup-code bg-gray-800 text-primary-content my-4 w-11/12 h-[89] md:h-96 rounded-2xl hover:scale-101 transition-transform duration-300 text-xs md:text-sm"
+                        class="md:col-span-3 mockup-code bg-black text-primary-content my-4 w-11/12 h-72 md:h-96 rounded-2xl hover:scale-101 transition-transform duration-300 text-xs md:text-sm"
                         id="about_me_block"
                     ></div>
                     <img

@@ -69,7 +69,7 @@ onMounted(() => {
         <div style="min-height: calc(100svh - 60px)">
             <div class="flex flex-col items-center">
                 <div
-                    class="md:grid md:grid-cols-4 md:gap-4 place-items-center pb-20 w-9/12"
+                    class="md:grid md:grid-cols-4 md:gap-4 place-items-center pb-20 pt-8 w-9/12"
                 >
                     <div
                         class="md:col-span-3 mockup-code bg-black text-primary-content my-4 w-11/12 h-72 md:h-96 rounded-2xl hover:scale-101 transition-transform duration-300 text-xs md:text-sm"

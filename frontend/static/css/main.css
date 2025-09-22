@@ -6,7 +6,7 @@
 } */
 
 .bg-gradient-gray {
-    background: linear-gradient(270deg, #0b0043, #1223a5);
+    background: linear-gradient(270deg, #232323, #3a3a3a);
     background-size: 200% 200%;
     animation: Grad 5s ease infinite;
 }

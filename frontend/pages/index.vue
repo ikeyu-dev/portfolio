@@ -75,15 +75,17 @@ onMounted(() => {
                         class="md:col-span-3 mockup-code bg-black text-primary-content my-4 w-full md:w-11/12 h-72 md:h-96 rounded-2xl hover:scale-101 transition-transform duration-300 text-xs md:text-sm"
                         id="about_me_block"
                     ></div>
-                    <div class="md:col-span-1 w-11/12">
-                        <img
-                            class="max-h-80 my-4 rounded-full shadow-lg"
-                            src="https://lh3.googleusercontent.com/a/ACg8ocJyKmN00v0EKYBId9b_gms6XRo-YnT7ZbgZVYPma5cNTPhMnjo=s576-c-no"
-                            alt="NO IMAGE"
-                        />
-                        <Urls />
+                    <div class="md:col-span-1 w-11/12 flex justify-center">
+                        <div>
+                            <img
+                                class="h-60 md:h-auto w-auto my-4 rounded-full shadow-lg"
+                                src="https://lh3.googleusercontent.com/a/ACg8ocJyKmN00v0EKYBId9b_gms6XRo-YnT7ZbgZVYPma5cNTPhMnjo=s576-c-no"
+                                alt="NO IMAGE"
+                            />
+                            <Urls />
 
-                        <Tech />
+                            <Tech />
+                        </div>
                     </div>
                 </div>
 

@@ -1,8 +1,10 @@
 <template>
-    <p class="mt-4 mb-2 text-lg text-gray-500 transition-all duration-300">
+    <p
+        class="flex justify-center items-center mt-4 mb-2 text-lg text-gray-200 transition-all duration-300"
+    >
         Tech Stack
     </p>
-    <div class="flex gap-4">
+    <div class="flex justify-center items-center gap-4">
         <a
             target="_blank"
             href="https://ja.vuejs.org/"

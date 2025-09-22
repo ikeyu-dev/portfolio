@@ -1,5 +1,10 @@
 <template>
-    <div class="flex gap-4">
+    <p
+        class="flex justify-center items-center mt-4 mb-2 text-lg text-gray-200 transition-all duration-300 whitespace-nowrap"
+    >
+        Yuma Ikeda / いけゆう
+    </p>
+    <div class="flex justify-center items-center gap-4">
         <div>
             <a
                 target="_blank"

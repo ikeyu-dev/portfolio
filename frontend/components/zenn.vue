@@ -35,7 +35,7 @@ onUnmounted(() => {
 
 <template>
     <section class="bg-base-100 rounded-box w-11/12 m-20">
-        <ul class="list bg-base-100 rounded-box shadow-md">
+        <ul class="list bg-base-100 rounded-box shadow-md p-5">
             <li class="p-4 pb-2 text-xs tracking-wide flex items-center">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"

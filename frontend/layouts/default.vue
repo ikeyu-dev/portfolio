@@ -11,7 +11,7 @@ watch(route, (newRoute: any) => {
 
 onMounted(() => {
     if (currentPath.value === "/") {
-        title.value = "Portfolio";
+        title.value = "Ikeyu's Portfolio";
     } else {
         title.value = currentPath.value.split("/")[1].replaceAll("_", " ");
     }

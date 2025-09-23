@@ -20,11 +20,11 @@ onMounted(() => {
 
 <template>
     <header
-        class="flex justify-between items-center bg-gray-50 border-b border-gray-300 transition-colors duration-300 p-4"
+        class="bg-gradient-gray flex justify-between items-center transition-colors duration-300 p-4 sticky top-0 z-10"
     >
         <div class="flex items-center">
             <span
-                class="text-lg font-bold text-gray-700 transition-colors duration-300"
+                class="text-lg font-bold text-gray-200 transition-colors duration-300"
             >
                 {{ title }}
             </span>

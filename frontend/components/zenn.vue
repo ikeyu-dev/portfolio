@@ -13,6 +13,24 @@ function estimated_Time(letters_count: number) {
         return Math.round(letters_count / 400) + "分";
     }
 }
+
+const md_show = ref<boolean>(true);
+const windowWidth = ref<number>(0);
+
+const updateVisibility = () => {
+    md_show.value = window.innerWidth >= 768;
+    windowWidth.value = window.innerWidth;
+};
+
+onMounted(async () => {
+    window.addEventListener("resize", updateVisibility);
+    updateVisibility();
+});
+
+onUnmounted(() => {
+    window.removeEventListener("resize", updateVisibility);
+    updateVisibility();
+});
 </script>
 
 <template>
@@ -63,7 +81,7 @@ function estimated_Time(letters_count: number) {
                                 {{ estimated_Time(article.body_letters_count) }}
                             </div>
                         </div>
-                        <div>
+                        <div v-if="md_show">
                             <p
                                 class="text-xs md:text-sm text-gray-500 transition-all duration-300"
                             >

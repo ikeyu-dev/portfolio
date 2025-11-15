@@ -78,10 +78,6 @@ export default function Home() {
             <div style={{ minHeight: "calc(100svh - 60px)" }}>
                 <div className="flex flex-col items-center">
                     <div className="md:grid md:grid-cols-4 md:gap-4 place-items-center pb-20 pt-8 w-full md:w-9/12 px-4">
-                        <div
-                            className="md:col-span-3 mockup-code bg-black text-primary-content my-4 w-full md:w-11/12 h-72 md:h-96 rounded-2xl hover:scale-101 transition-transform duration-300 text-xs md:text-sm"
-                            id="about_me_block"
-                        ></div>
                         <div className="md:col-span-1 w-11/12 flex justify-center">
                             <div>
                                 <img

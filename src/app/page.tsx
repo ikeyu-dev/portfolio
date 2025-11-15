@@ -77,8 +77,8 @@ export default function Home() {
         <div className="bg-gradient-gray transition-colors duration-300 h-full">
             <div style={{ minHeight: "calc(100svh - 60px)" }}>
                 <div className="flex flex-col items-center">
-                    <div className="md:grid md:grid-cols-4 md:gap-4 place-items-center pb-20 pt-8 w-full md:w-9/12 px-4">
-                        <div className="md:col-span-1 w-11/12 flex justify-center">
+                    <div className="place-items-center pb-20 pt-8 w-full md:w-9/12 px-4">
+                        <div className="w-full md:1/3 flex justify-center">
                             <div>
                                 <img
                                     className="h-60 md:h-auto w-auto my-4 rounded-full shadow-lg"

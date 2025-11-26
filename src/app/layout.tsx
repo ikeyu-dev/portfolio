@@ -23,17 +23,7 @@ export default function RootLayout({
 
     return (
         <html lang="ja">
-            <body className="antialiased">
-                <header className="bg-gradient-gray flex justify-between items-center transition-colors duration-300 p-4 sticky top-0 z-10">
-                    <div className="flex items-center">
-                        <span className="text-lg font-bold text-gray-200 transition-colors duration-300">
-                            {/* {title} */}
-                            Ikeyu's Portfolio
-                        </span>
-                    </div>
-                </header>
-                {children}
-            </body>
+            <body className="antialiased">{children}</body>
         </html>
     );
 }

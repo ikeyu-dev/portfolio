@@ -1,5 +1,5 @@
 // src/app/layout.tsx
-"use client";
+// "use client";
 
 // import { useEffect, useState } from "react";
 // import { usePathname } from "next/navigation";

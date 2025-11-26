@@ -1,20 +1,14 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-.bg-gradient-gray {
-    background: linear-gradient(270deg, #232323, #515151);
-    background-size: 200% 200%;
-    animation: Grad 5s ease infinite;
+.bg-img {
+    background-image: url("./bg_img.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-
-@keyframes Grad {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+div {
+    font-family: "Zen Maru Gothic";
+    font-style: normal;
+    font-weight: 500;
 }

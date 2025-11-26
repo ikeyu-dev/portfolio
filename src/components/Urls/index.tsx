@@ -5,8 +5,8 @@ import React from "react";
 export const Urls = () => {
     return (
         <div>
-            <p className="flex justify-center items-center mt-4 mb-2 text-lg text-gray-200 transition-all duration-300 whitespace-nowrap">
-                Yuma Ikeda / いけゆう
+            <p className="flex justify-center items-center my-5 text-xl text-gray-200 transition-all duration-300 whitespace-nowrap">
+                いけゆう / 池田 悠真
             </p>
             <div className="flex justify-center items-center gap-4">
                 <div>

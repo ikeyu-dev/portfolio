@@ -50,7 +50,7 @@ interface ZennResponse {
 export const Zenn = () => {
     const [zennArticles, setArticles] = useState<ZennResponse | null>(null);
     const [mdShow, setMdShow] = useState<boolean>(true);
-    const [windowWidth, setwindowWidth] = useState<number>(0);
+    const [_windowWidth, setwindowWidth] = useState<number>(0);
 
     useEffect(() => {
         const fetchArticles = async () => {

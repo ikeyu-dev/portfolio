@@ -10,20 +10,9 @@ export default function RootLayout({
 }: {
     children: React.ReactNode;
 }) {
-    // const pathname = usePathname();
-    // const [title, setTitle] = useState("");
-
-    // useEffect(() => {
-    //     if (pathname === "/") {
-    //         setTitle("Ikeyu's Portfolio");
-    //     } else {
-    //         setTitle(pathname.split("/")[1].replaceAll("_", " "));
-    //     }
-    // }, [pathname]);
-
     return (
         <html lang="ja">
-            <body className="antialiased">{children}</body>
+            <body className="antialiased bg-img">{children}</body>
         </html>
     );
 }

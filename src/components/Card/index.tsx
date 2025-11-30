@@ -8,7 +8,7 @@ export const Card = () => {
         <div>
             <div className="hover-3d">
                 <div className="card card-body rounded-2xl grid grid-cols-9 md:grid-cols-12 items-center">
-                    <div className="col-span-3 md:flex justify-center hidden">
+                    <div className="col-span-4 md:flex justify-center hidden">
                         <Image
                             width={150}
                             height={150}

@@ -15,7 +15,7 @@ export default function Home() {
             <header className="bg-gradient-gray flex justify-between items-center transition-colors duration-300 p-4 pb-10 sticky top-0 z-10">
                 <div className="flex items-center">
                     <span className="text-2xl font-bold text-gray-200 transition-colors duration-300">
-                        Ikeyu's Portfolio
+                        Ikeyu&apos;s Portfolio
                     </span>
                 </div>
             </header>

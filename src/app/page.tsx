@@ -2,8 +2,7 @@
 
 import { useEffect, FC } from "react";
 
-import { Tech } from "@/components/Tech";
-import { Urls } from "@/components/Urls";
+import { Card } from "@/components/Card";
 import { Zenn } from "@/components/Zenn";
 
 export default function Home() {
@@ -87,15 +86,7 @@ export default function Home() {
                     <div className="place-items-center pb-20 pt-8 w-full md:w-9/12 px-4">
                         <div className="w-full md:w-60 flex justify-center">
                             <div>
-                                <img
-                                    className="h-60 md:h-auto w-auto my-4 rounded-full shadow-lg"
-                                    src="https://lh3.googleusercontent.com/a/ACg8ocJyKmN00v0EKYBId9b_gms6XRo-YnT7ZbgZVYPma5cNTPhMnjo=s576-c-no"
-                                    alt="ikeyu's-icon"
-                                />
-                                <>
-                                    <Urls />
-                                    <Tech />
-                                </>
+                                <Card />
                             </div>
                         </div>
                     </div>

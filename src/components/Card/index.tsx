@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 import React from "react";
 
@@ -8,7 +9,9 @@ export const Card = () => {
             <div className="hover-3d">
                 <div className="card card-body rounded-2xl grid grid-cols-9 md:grid-cols-12 items-center">
                     <div className="col-span-3 md:flex justify-center hidden">
-                        <img
+                        <Image
+                            width={150}
+                            height={150}
                             className="rounded-full shadow-lg"
                             src="https://lh3.googleusercontent.com/a/ACg8ocJyKmN00v0EKYBId9b_gms6XRo-YnT7ZbgZVYPma5cNTPhMnjo=s576-c-no"
                             alt="ikeyu's-icon"

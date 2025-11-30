@@ -61,7 +61,7 @@ export const Zenn = () => {
 
                 articles.articles.sort((a, b) => a.id - b.id);
 
-                if (articles === null) {
+                if (!articles === null) {
                     console.log("No articles found");
                 } else {
                     setArticles(articles);

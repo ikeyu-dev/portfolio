@@ -50,7 +50,7 @@ interface ZennResponse {
 export const Zenn = () => {
     const [zennArticles, setArticles] = useState<ZennResponse | null>(null);
     const [mdShow, setMdShow] = useState<boolean>(true);
-    const [windowWidth, setwindowWidth] = useState<number>(0);
+    let [windowWidth, setwindowWidth] = useState<number>(0);
 
     useEffect(() => {
         const fetchArticles = async () => {
@@ -75,7 +75,8 @@ export const Zenn = () => {
 
         const updateVisibility = () => {
             setMdShow(window.innerWidth >= 768);
-            setwindowWidth(window.innerWidth);
+            windowWidth = window.innerWidth;
+            setwindowWidth(windowWidth);
         };
 
         window.addEventListener("resize", updateVisibility);

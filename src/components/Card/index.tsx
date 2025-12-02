@@ -257,6 +257,7 @@ export const Card = () => {
                             className="rounded-full shadow-lg"
                             src="https://lh3.googleusercontent.com/a/ACg8ocJyKmN00v0EKYBId9b_gms6XRo-YnT7ZbgZVYPma5cNTPhMnjo=s576-c-no"
                             alt="ikeyu's-icon"
+                            priority
                         />
                     </div>
                     <div className="md:col-span-8 md:pl-4">

@@ -1,5 +1,3 @@
-// /Users/uyuyu/02.code/portfolio/src/app/@zenn/page.tsx
-"use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 

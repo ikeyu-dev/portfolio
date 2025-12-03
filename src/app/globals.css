@@ -13,3 +13,13 @@ div {
     font-style: normal;
     font-weight: 500;
 }
+
+.cls-1 {
+    fill: url(#linear-gradient);
+}
+.cls-2 {
+    fill: #fff;
+}
+.cls-3 {
+    fill: url(#linear-gradient-2);
+}

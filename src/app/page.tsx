@@ -4,6 +4,7 @@ import { useEffect, FC } from "react";
 
 import { Card } from "@/components/Card";
 import { Zenn } from "@/components/Zenn";
+import { Connpass } from "@/components/Connpass";
 
 export default function Home() {
     useEffect(() => {
@@ -29,6 +30,7 @@ export default function Home() {
                         </div>
                     </div>
                     <Zenn />
+                    <Connpass />
                 </div>
             </div>
         </div>

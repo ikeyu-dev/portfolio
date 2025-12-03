@@ -215,13 +215,19 @@ export const Connpass = () => {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {conpassEvent?.events.map((event) => (
                         <div key={event.id}>
-                            <figure className="p-5">
-                                <img
-                                    src={event.image_url || ""}
-                                    alt="image"
-                                    className="rounded-xl object-cover w-full h-48"
-                                />
-                            </figure>
+                            <Link
+                                href={event.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <figure className="p-5">
+                                    <img
+                                        src={event.image_url || ""}
+                                        alt="image"
+                                        className="rounded-xl object-cover w-full h-48 hover:scale-105 transition-transform duration-300"
+                                    />
+                                </figure>
+                            </Link>
                             <div className="card-body items-center text-center p-0">
                                 <h2
                                     className={`card-title object-cover w-full justify-center h-10 ${

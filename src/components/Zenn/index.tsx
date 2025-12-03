@@ -93,8 +93,8 @@ export const Zenn = () => {
     };
 
     return (
-        <section className="bg-base-100 rounded-box w-11/12 m-20">
-            <ul className="list bg-base-100 rounded-box shadow-md md:p-4">
+        <section className="bg-base-100 rounded-box w-11/12 m-20 mb-0">
+            <ul className="list bg-base-100 rounded-box shadow-md md:p-2">
                 <li className="p-4 pb-2 text-xs tracking-wide flex items-center">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

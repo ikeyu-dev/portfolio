@@ -4,7 +4,7 @@ import { useEffect, FC } from "react";
 
 import { Card } from "@/components/Card";
 import { Zenn } from "@/components/Zenn";
-import { Connpass } from "@/components/Connpass";
+import { Events } from "@/components/Events";
 
 export default function Home() {
     useEffect(() => {
@@ -30,7 +30,7 @@ export default function Home() {
                         </div>
                     </div>
                     <Zenn />
-                    <Connpass />
+                    <Events />
                 </div>
             </div>
         </div>

@@ -43,9 +43,8 @@ export default async function AdminEventsPage() {
                             <thead>
                                 <tr>
                                     <th>タイトル</th>
-                                    <th>開催日</th>
-                                    <th>主催者</th>
-                                    <th>ソース</th>
+                                    <th>開始日</th>
+                                    <th>終了日</th>
                                     <th className="text-right">
                                         操作
                                     </th>
@@ -76,11 +75,14 @@ export default async function AdminEventsPage() {
                                                   )
                                                 : "-"}
                                         </td>
-                                        <td>{event.organizer_name}</td>
-                                        <td>
-                                            <span className="badge badge-outline badge-sm">
-                                                {event.source}
-                                            </span>
+                                        <td className="whitespace-nowrap">
+                                            {event.ended_at
+                                                ? new Date(
+                                                      event.ended_at
+                                                  ).toLocaleDateString(
+                                                      "ja-JP"
+                                                  )
+                                                : "-"}
                                         </td>
                                         <td>
                                             <div className="flex justify-end gap-1">

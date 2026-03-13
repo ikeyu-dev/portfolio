@@ -5,6 +5,27 @@ import Link from "next/link";
 import { Event } from "@/types/event";
 
 /**
+ * 日付の表示文字列を生成する
+ */
+function formatDateRange(startedAt: string | null, endedAt: string | null) {
+    const opts: Intl.DateTimeFormatOptions = {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+    };
+
+    if (!startedAt) return "日時未定";
+
+    const start = new Date(startedAt).toLocaleDateString("ja-JP", opts);
+    if (!endedAt) return start;
+
+    const end = new Date(endedAt).toLocaleDateString("ja-JP", opts);
+    if (start === end) return start;
+
+    return `${start} - ${end}`;
+}
+
+/**
  * Supabaseからイベント一覧を取得して表示するコンポーネント
  */
 export const Events = () => {
@@ -33,67 +54,29 @@ export const Events = () => {
                 <li className="p-4 pb-2 text-xs tracking-wide flex items-center">
                     <span>参加イベント</span>
                 </li>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {events.map((event) => (
-                        <div key={event.id}>
+                {events.map((event) => (
+                    <li
+                        key={event.id}
+                        className="list-row"
+                    >
+                        <div className="list-col-grow">
                             <Link
                                 href={event.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                className="link link-hover font-medium"
                             >
-                                <figure className="p-5">
-                                    <img
-                                        src={event.image_url || ""}
-                                        alt="image"
-                                        className="rounded-xl object-cover w-full h-48 hover:scale-105 transition-transform duration-300"
-                                    />
-                                </figure>
+                                {event.title}
                             </Link>
-                            <div className="card-body items-center text-center p-0">
-                                <h2
-                                    className={`card-title object-cover w-full justify-center h-10 ${
-                                        event.title.length > 20
-                                            ? "text-sm"
-                                            : "text-md"
-                                    }`}
-                                >
-                                    {event.title}
-                                </h2>
-                                <div className="grid grid-cols-2 gap-2">
-                                    <p className="whitespace-nowrap">
-                                        主催:
-                                        {event.organizer_url ? (
-                                            <Link
-                                                href={event.organizer_url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="ml-1"
-                                            >
-                                                {event.organizer_name}
-                                            </Link>
-                                        ) : (
-                                            <span className="ml-1">
-                                                {event.organizer_name}
-                                            </span>
-                                        )}
-                                    </p>
-                                    <p>
-                                        開催日時:{" "}
-                                        {event.started_at
-                                            ? new Date(
-                                                  event.started_at
-                                              ).toLocaleString("ja-JP", {
-                                                  year: "numeric",
-                                                  month: "2-digit",
-                                                  day: "2-digit",
-                                              })
-                                            : "未定"}
-                                    </p>
-                                </div>
-                            </div>
+                            <p className="text-xs text-base-content/60">
+                                {formatDateRange(
+                                    event.started_at,
+                                    event.ended_at
+                                )}
+                            </p>
                         </div>
-                    ))}
-                </div>
+                    </li>
+                ))}
             </ul>
         </section>
     );

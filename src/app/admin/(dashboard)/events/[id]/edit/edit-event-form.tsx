@@ -20,6 +20,10 @@ export function EditEventForm({ event }: { event: Event }) {
         ? new Date(event.started_at).toISOString().slice(0, 16)
         : "";
 
+    const endedAtValue = event.ended_at
+        ? new Date(event.ended_at).toISOString().slice(0, 16)
+        : "";
+
     return (
         <div className="space-y-6">
             <div className="flex items-center justify-between">
@@ -44,48 +48,34 @@ export function EditEventForm({ event }: { event: Event }) {
                 action={formAction}
                 className="bg-base-100 rounded-box shadow-md p-6 space-y-4"
             >
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <fieldset className="fieldset">
-                        <legend className="fieldset-legend">
-                            タイトル *
-                        </legend>
-                        <input
-                            type="text"
-                            name="title"
-                            required
-                            defaultValue={event.title}
-                            className="input input-bordered w-full"
-                        />
-                    </fieldset>
-                    <fieldset className="fieldset">
-                        <legend className="fieldset-legend">
-                            URL *
-                        </legend>
-                        <input
-                            type="url"
-                            name="url"
-                            required
-                            defaultValue={event.url}
-                            className="input input-bordered w-full"
-                        />
-                    </fieldset>
-                </div>
+                <fieldset className="fieldset">
+                    <legend className="fieldset-legend">
+                        タイトル *
+                    </legend>
+                    <input
+                        type="text"
+                        name="title"
+                        required
+                        defaultValue={event.title}
+                        className="input input-bordered w-full"
+                    />
+                </fieldset>
+
+                <fieldset className="fieldset">
+                    <legend className="fieldset-legend">URL *</legend>
+                    <input
+                        type="url"
+                        name="url"
+                        required
+                        defaultValue={event.url}
+                        className="input input-bordered w-full"
+                    />
+                </fieldset>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend">
-                            画像URL
-                        </legend>
-                        <input
-                            type="url"
-                            name="image_url"
-                            defaultValue={event.image_url ?? ""}
-                            className="input input-bordered w-full"
-                        />
-                    </fieldset>
-                    <fieldset className="fieldset">
-                        <legend className="fieldset-legend">
-                            開催日時
+                            開始日時
                         </legend>
                         <input
                             type="datetime-local"
@@ -94,63 +84,14 @@ export function EditEventForm({ event }: { event: Event }) {
                             className="input input-bordered w-full"
                         />
                     </fieldset>
-                </div>
-
-                <div className="divider my-0">主催者情報</div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend">
-                            主催者名 *
+                            終了日時
                         </legend>
                         <input
-                            type="text"
-                            name="organizer_name"
-                            required
-                            defaultValue={event.organizer_name}
-                            className="input input-bordered w-full"
-                        />
-                    </fieldset>
-                    <fieldset className="fieldset">
-                        <legend className="fieldset-legend">
-                            主催者URL
-                        </legend>
-                        <input
-                            type="url"
-                            name="organizer_url"
-                            defaultValue={event.organizer_url ?? ""}
-                            className="input input-bordered w-full"
-                        />
-                    </fieldset>
-                </div>
-
-                <div className="divider my-0">ソース情報</div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <fieldset className="fieldset">
-                        <legend className="fieldset-legend">
-                            ソース
-                        </legend>
-                        <select
-                            name="source"
-                            defaultValue={event.source}
-                            className="select select-bordered w-full"
-                        >
-                            <option value="connpass">connpass</option>
-                            <option value="doorkeeper">
-                                doorkeeper
-                            </option>
-                            <option value="other">other</option>
-                        </select>
-                    </fieldset>
-                    <fieldset className="fieldset">
-                        <legend className="fieldset-legend">
-                            ソースイベントID
-                        </legend>
-                        <input
-                            type="text"
-                            name="source_event_id"
-                            defaultValue={event.source_event_id ?? ""}
+                            type="datetime-local"
+                            name="ended_at"
+                            defaultValue={endedAtValue}
                             className="input input-bordered w-full"
                         />
                     </fieldset>

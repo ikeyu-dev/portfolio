@@ -7,48 +7,36 @@ describe("Event型定義", () => {
             id: "550e8400-e29b-41d4-a716-446655440000",
             title: "テストイベント",
             url: "https://example.com/event/1",
-            image_url: "https://example.com/image.png",
             started_at: "2026-03-15T10:00:00+09:00",
-            organizer_name: "テスト主催者",
-            organizer_url: "https://example.com/organizer",
-            source: "connpass",
-            source_event_id: "12345",
+            ended_at: "2026-03-16T18:00:00+09:00",
             created_at: "2026-03-13T00:00:00+09:00",
             updated_at: "2026-03-13T00:00:00+09:00",
         };
         expect(event.id).toBeDefined();
         expect(event.title).toBe("テストイベント");
-        expect(event.source).toBe("connpass");
+        expect(event.ended_at).toBe("2026-03-16T18:00:00+09:00");
     });
 
-    it("image_urlがnullを許容すること", () => {
+    it("started_atとended_atがnullを許容すること", () => {
         const event: Event = {
             id: "550e8400-e29b-41d4-a716-446655440000",
-            title: "画像なしイベント",
+            title: "日時未定イベント",
             url: "https://example.com/event/2",
-            image_url: null,
             started_at: null,
-            organizer_name: "テスト主催者",
-            organizer_url: null,
-            source: "other",
-            source_event_id: null,
+            ended_at: null,
             created_at: "2026-03-13T00:00:00+09:00",
             updated_at: "2026-03-13T00:00:00+09:00",
         };
-        expect(event.image_url).toBeNull();
         expect(event.started_at).toBeNull();
+        expect(event.ended_at).toBeNull();
     });
 
     it("CreateEventInputにid, created_at, updated_atが含まれないこと", () => {
         const input: CreateEventInput = {
             title: "新規イベント",
             url: "https://example.com/event/new",
-            image_url: null,
             started_at: null,
-            organizer_name: "主催者",
-            organizer_url: null,
-            source: "connpass",
-            source_event_id: null,
+            ended_at: null,
         };
         expect(input).not.toHaveProperty("id");
         expect(input).not.toHaveProperty("created_at");

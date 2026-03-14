@@ -23,7 +23,7 @@ export default function AdminEventNewPage() {
                 </h1>
                 <Link
                     href="/admin/events"
-                    className="btn btn-ghost btn-sm text-gray-300"
+                    className="btn btn-link btn-sm text-gray-300 no-underline"
                 >
                     戻る
                 </Link>

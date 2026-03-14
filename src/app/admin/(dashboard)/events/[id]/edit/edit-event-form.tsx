@@ -32,7 +32,7 @@ export function EditEventForm({ event }: { event: Event }) {
                 </h1>
                 <Link
                     href="/admin/events"
-                    className="btn btn-link btn-sm text-gray-300"
+                    className="btn btn-link btn-sm text-gray-300 no-underline"
                 >
                     戻る
                 </Link>

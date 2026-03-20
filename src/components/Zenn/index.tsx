@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+
 async function getZennArticles<zenn_response>(
     username: string
 ): Promise<zenn_response> {
@@ -56,9 +57,8 @@ export const Zenn = () => {
     useEffect(() => {
         const fetchArticles = async () => {
             try {
-                const articles = await getZennArticles<ZennArticle>(
-                    "uyuy_create"
-                );
+                const articles =
+                    await getZennArticles<ZennArticle>("uyuy_create");
 
                 articles.articles.sort((a, b) => a.id - b.id);
 
@@ -89,7 +89,7 @@ export const Zenn = () => {
 
     const estimatedTime = (lettersCount: number) => {
         if (lettersCount !== null) {
-            return Math.round(lettersCount / 400) + "分";
+            return `${Math.round(lettersCount / 400)}分`;
         }
     };
 
@@ -121,60 +121,56 @@ export const Zenn = () => {
                     </svg>
                     <span>Zenn記事一覧</span>
                 </li>
-                {zennArticles !== null &&
-                    zennArticles.articles.map((article) => (
-                        <div key={article.id}>
-                            <Link
-                                href={`https://zenn.dev/uyuy_create/articles/${article.slug}`}
-                                target="_blank"
+                {zennArticles?.articles.map((article) => (
+                    <div key={article.id}>
+                        <Link
+                            href={`https://zenn.dev/uyuy_create/articles/${article.slug}`}
+                            target="_blank"
+                        >
+                            <li
+                                className="list-row"
+                                key={article.id}
                             >
-                                <li
-                                    className="list-row"
-                                    key={article.id}
-                                >
-                                    <div className="text-3xl">
-                                        {article.emoji}
+                                <div className="text-3xl">{article.emoji}</div>
+                                <div>
+                                    <div className="font-bold">
+                                        {article.title}
                                     </div>
+                                    <div className="text-xs opacity-60">
+                                        {article.body_letters_count}文字 目安 :{" "}
+                                        {estimatedTime(
+                                            article.body_letters_count
+                                        )}
+                                    </div>
+                                </div>
+                                {mdShow && (
                                     <div>
-                                        <div className="font-bold">
-                                            {article.title}
-                                        </div>
-                                        <div className="text-xs opacity-60">
-                                            {article.body_letters_count}文字
-                                            目安 :{" "}
-                                            {estimatedTime(
-                                                article.body_letters_count
-                                            )}
-                                        </div>
+                                        <p className="text-xs md:text-sm text-gray-500 transition-all duration-300">
+                                            更新日 :{" "}
+                                            {article.body_updated_at
+                                                .split("T")[0]
+                                                .replaceAll("-", "/") +
+                                                " " +
+                                                article.body_updated_at
+                                                    .split("T")[1]
+                                                    .split(".")[0]}
+                                        </p>
+                                        <p className="text-xs md:text-sm text-gray-500 transition-all duration-300">
+                                            公開日 :{" "}
+                                            {article.published_at
+                                                .split("T")[0]
+                                                .replaceAll("-", "/") +
+                                                " " +
+                                                article.published_at
+                                                    .split("T")[1]
+                                                    .split(".")[0]}
+                                        </p>
                                     </div>
-                                    {mdShow && (
-                                        <div>
-                                            <p className="text-xs md:text-sm text-gray-500 transition-all duration-300">
-                                                更新日 :{" "}
-                                                {article.body_updated_at
-                                                    .split("T")[0]
-                                                    .replaceAll("-", "/") +
-                                                    " " +
-                                                    article.body_updated_at
-                                                        .split("T")[1]
-                                                        .split(".")[0]}
-                                            </p>
-                                            <p className="text-xs md:text-sm text-gray-500 transition-all duration-300">
-                                                公開日 :{" "}
-                                                {article.published_at
-                                                    .split("T")[0]
-                                                    .replaceAll("-", "/") +
-                                                    " " +
-                                                    article.published_at
-                                                        .split("T")[1]
-                                                        .split(".")[0]}
-                                            </p>
-                                        </div>
-                                    )}
-                                </li>
-                            </Link>
-                        </div>
-                    ))}
+                                )}
+                            </li>
+                        </Link>
+                    </div>
+                ))}
             </ul>
         </section>
     );

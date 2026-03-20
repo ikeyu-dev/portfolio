@@ -1,5 +1,5 @@
-import { describe, it, expect } from "vitest";
-import type { Event, CreateEventInput, UpdateEventInput } from "@/types/event";
+import { describe, expect, it } from "vitest";
+import type { CreateEventInput, Event, UpdateEventInput } from "@/types/event";
 
 describe("Event型定義", () => {
     it("Eventオブジェクトが正しい構造を持つこと", () => {

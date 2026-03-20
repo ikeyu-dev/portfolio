@@ -45,9 +45,7 @@ export default async function AdminEventsPage() {
                                     <th>タイトル</th>
                                     <th>開始日</th>
                                     <th>終了日</th>
-                                    <th className="text-right">
-                                        操作
-                                    </th>
+                                    <th className="text-right">操作</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -70,18 +68,14 @@ export default async function AdminEventsPage() {
                                             {event.started_at
                                                 ? new Date(
                                                       event.started_at
-                                                  ).toLocaleDateString(
-                                                      "ja-JP"
-                                                  )
+                                                  ).toLocaleDateString("ja-JP")
                                                 : "-"}
                                         </td>
                                         <td className="whitespace-nowrap">
                                             {event.ended_at
                                                 ? new Date(
                                                       event.ended_at
-                                                  ).toLocaleDateString(
-                                                      "ja-JP"
-                                                  )
+                                                  ).toLocaleDateString("ja-JP")
                                                 : "-"}
                                         </td>
                                         <td>

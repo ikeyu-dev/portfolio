@@ -1,5 +1,5 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
-import type { Event, CreateEventInput } from "@/types/event";
+import { beforeEach, describe, expect, it, vi } from "vitest";
+import type { CreateEventInput, Event } from "@/types/event";
 
 // Supabaseクライアントのモック
 const mockSelect = vi.fn();

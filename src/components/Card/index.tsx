@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import React, { useRef } from "react";
+import { useRef } from "react";
 
 export const Card = () => {
     const modalRef = useRef<HTMLDialogElement>(null);
@@ -470,7 +470,7 @@ export const Card = () => {
                     method="dialog"
                     className="modal-backdrop"
                 >
-                    <button></button>
+                    <button type="button"></button>
                 </form>
             </dialog>
         </div>

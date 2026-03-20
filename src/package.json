@@ -7,9 +7,13 @@
         "build": "next build --turbopack",
         "start": "next start",
         "lint": "eslint",
+        "lint:biome": "biome check .",
+        "format": "biome format --write .",
+        "check": "biome check --write .",
         "vercel-build": "next build",
         "test": "vitest",
-        "test:run": "vitest run"
+        "test:run": "vitest run",
+        "prepare": "cd .. && husky src/.husky || true"
     },
     "dependencies": {
         "@supabase/ssr": "^0.9.0",
@@ -19,6 +23,7 @@
         "react-dom": "19.1.0"
     },
     "devDependencies": {
+        "@biomejs/biome": "^2.4.7",
         "@eslint/eslintrc": "^3",
         "@tailwindcss/postcss": "^4.1.13",
         "@testing-library/jest-dom": "^6.9.1",
@@ -31,6 +36,7 @@
         "daisyui": "^5.5.5",
         "eslint": "^9",
         "eslint-config-next": "15.5.4",
+        "husky": "^9.1.7",
         "jsdom": "^28.1.0",
         "tailwindcss": "^4.1.13",
         "typescript": "^5",

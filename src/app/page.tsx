@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, FC } from "react";
+import { useEffect } from "react";
 
 import { Card } from "@/components/Card";
-import { Zenn } from "@/components/Zenn";
 import { Events } from "@/components/Events";
+import { Zenn } from "@/components/Zenn";
 
 export default function Home() {
     useEffect(() => {

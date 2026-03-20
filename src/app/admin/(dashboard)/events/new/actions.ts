@@ -20,9 +20,7 @@ export async function createEventAction(formData: FormData) {
     } catch (error) {
         return {
             error:
-                error instanceof Error
-                    ? error.message
-                    : "作成に失敗しました",
+                error instanceof Error ? error.message : "作成に失敗しました",
         };
     }
 

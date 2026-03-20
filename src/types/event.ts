@@ -10,10 +10,7 @@ export interface Event {
 }
 
 /** イベント作成時の入力型 */
-export type CreateEventInput = Omit<
-    Event,
-    "id" | "created_at" | "updated_at"
->;
+export type CreateEventInput = Omit<Event, "id" | "created_at" | "updated_at">;
 
 /** イベント更新時の入力型 */
 export type UpdateEventInput = Partial<CreateEventInput>;

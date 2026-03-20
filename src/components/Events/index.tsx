@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Event } from "@/types/event";
+import { useEffect, useState } from "react";
+import type { Event } from "@/types/event";
 
 /**
  * 日付の表示文字列を生成する

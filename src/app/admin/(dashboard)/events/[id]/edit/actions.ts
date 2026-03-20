@@ -20,9 +20,7 @@ export async function updateEventAction(id: string, formData: FormData) {
     } catch (error) {
         return {
             error:
-                error instanceof Error
-                    ? error.message
-                    : "更新に失敗しました",
+                error instanceof Error ? error.message : "更新に失敗しました",
         };
     }
 

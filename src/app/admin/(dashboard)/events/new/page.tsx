@@ -1,7 +1,7 @@
 "use client";
 
-import { useActionState } from "react";
 import Link from "next/link";
+import { useActionState } from "react";
 import { createEventAction } from "./actions";
 
 /**
@@ -30,9 +30,7 @@ export default function AdminEventNewPage() {
             </div>
 
             {state?.error && (
-                <div className="alert alert-error text-sm">
-                    {state.error}
-                </div>
+                <div className="alert alert-error text-sm">{state.error}</div>
             )}
 
             <form
@@ -40,9 +38,7 @@ export default function AdminEventNewPage() {
                 className="bg-base-100 rounded-box shadow-md p-6 space-y-4"
             >
                 <fieldset className="fieldset">
-                    <legend className="fieldset-legend">
-                        タイトル *
-                    </legend>
+                    <legend className="fieldset-legend">タイトル *</legend>
                     <input
                         type="text"
                         name="title"
@@ -63,9 +59,7 @@ export default function AdminEventNewPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <fieldset className="fieldset">
-                        <legend className="fieldset-legend">
-                            開始日時
-                        </legend>
+                        <legend className="fieldset-legend">開始日時</legend>
                         <input
                             type="datetime-local"
                             name="started_at"
@@ -73,9 +67,7 @@ export default function AdminEventNewPage() {
                         />
                     </fieldset>
                     <fieldset className="fieldset">
-                        <legend className="fieldset-legend">
-                            終了日時
-                        </legend>
+                        <legend className="fieldset-legend">終了日時</legend>
                         <input
                             type="datetime-local"
                             name="ended_at"

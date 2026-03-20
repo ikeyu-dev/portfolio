@@ -1,5 +1,5 @@
 import { createClient } from "@/lib/supabase/server";
-import type { Event, CreateEventInput, UpdateEventInput } from "@/types/event";
+import type { CreateEventInput, Event, UpdateEventInput } from "@/types/event";
 
 /**
  * イベント一覧をstarted_at降順で取得する

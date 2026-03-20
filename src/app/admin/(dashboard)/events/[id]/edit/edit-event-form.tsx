@@ -1,7 +1,7 @@
 "use client";
 
-import { useActionState } from "react";
 import Link from "next/link";
+import { useActionState } from "react";
 import type { Event } from "@/types/event";
 import { updateEventAction } from "./actions";
 
@@ -39,9 +39,7 @@ export function EditEventForm({ event }: { event: Event }) {
             </div>
 
             {state?.error && (
-                <div className="alert alert-error text-sm">
-                    {state.error}
-                </div>
+                <div className="alert alert-error text-sm">{state.error}</div>
             )}
 
             <form
@@ -49,9 +47,7 @@ export function EditEventForm({ event }: { event: Event }) {
                 className="bg-base-100 rounded-box shadow-md p-6 space-y-4"
             >
                 <fieldset className="fieldset">
-                    <legend className="fieldset-legend">
-                        タイトル *
-                    </legend>
+                    <legend className="fieldset-legend">タイトル *</legend>
                     <input
                         type="text"
                         name="title"
@@ -74,9 +70,7 @@ export function EditEventForm({ event }: { event: Event }) {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <fieldset className="fieldset">
-                        <legend className="fieldset-legend">
-                            開始日時
-                        </legend>
+                        <legend className="fieldset-legend">開始日時</legend>
                         <input
                             type="datetime-local"
                             name="started_at"
@@ -85,9 +79,7 @@ export function EditEventForm({ event }: { event: Event }) {
                         />
                     </fieldset>
                     <fieldset className="fieldset">
-                        <legend className="fieldset-legend">
-                            終了日時
-                        </legend>
+                        <legend className="fieldset-legend">終了日時</legend>
                         <input
                             type="datetime-local"
                             name="ended_at"

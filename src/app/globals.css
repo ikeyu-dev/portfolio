@@ -10,6 +10,14 @@
     background-attachment: fixed;
     min-height: 100svh;
 }
+
+.modal-card-bg {
+    background-image: url("./bg_img.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 div {
     font-family: "Zen Maru Gothic";
     font-style: normal;

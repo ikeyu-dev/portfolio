@@ -2,6 +2,13 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+Create `.env.local` with the connpass API key before running the app:
+
+```bash
+CONNPASS_API_KEY=your_connpass_api_key
+CONNPASS_USERNAME=uyuyu_dev
+```
+
 First, run the development server:
 
 ```bash

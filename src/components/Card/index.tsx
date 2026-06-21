@@ -248,7 +248,7 @@ export const Card = () => {
                 id="modal-card"
                 ref={modalRef}
             >
-                <div className="bg-img modal-box lg:min-w-7/12  card card-body rounded-2xl md:grid md:grid-cols-12 items-center">
+                <div className="modal-card-bg modal-box lg:min-w-7/12  card card-body rounded-2xl md:grid md:grid-cols-12 items-center">
                     <div className="md:col-span-4 md:flex justify-center md:right-0">
                         <Image
                             width={150}

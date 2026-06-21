@@ -34,7 +34,7 @@ export const Card = () => {
                                 <p>
                                     日本工業大学先進工学部データサイエンス学科
                                 </p>
-                                <p>特定非営利活動法人NxTEND　戦略事業本部</p>
+                                <p>特定非営利活動法人NxTEND　関東事業部</p>
                             </div>
                         </div>
                         <div className="flex space-x-4">
@@ -268,7 +268,7 @@ export const Card = () => {
                                 <p>
                                     日本工業大学先進工学部データサイエンス学科
                                 </p>
-                                <p>特定非営利活動法人NxTEND　戦略事業本部</p>
+                                <p>特定非営利活動法人NxTEND　関東事業部</p>
                             </div>
                         </div>
                         <div className="flex space-x-4">

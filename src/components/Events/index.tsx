@@ -26,7 +26,7 @@ function formatDateRange(startedAt: string | null, endedAt: string | null) {
 }
 
 /**
- * Supabaseからイベント一覧を取得して表示するコンポーネント
+ * connpass由来のイベント一覧を取得して表示するコンポーネント
  */
 export const Events = () => {
     const [events, setEvents] = useState<Event[]>([]);
